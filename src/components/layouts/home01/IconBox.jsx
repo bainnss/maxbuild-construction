@@ -10,19 +10,19 @@ class IconBox extends Component {
                     id: 1,
                     icon: "autora-icon-quality",
                     title: "BEST QUALITY",
-                    text: "Autora Construction Services are committed to meeting the highest quality standards without compromising our safety culture.."
+                    text: "Maxbuild Construction Services are committed to meeting the highest quality standards without compromising our safety culture.."
                 },
                 {
                     id: 2,
                     icon: "autora-icon-time",
                     title: "ON TIME",
-                    text: "Autora Construction Services are committed to meeting the highest quality standards without compromising our safety culture.."
+                    text: "Maxbuild Construction Services are committed to meeting the highest quality standards without compromising our safety culture.."
                 },
                 {
                     id: 3,
                     icon: "autora-icon-author",
                     title: "EXPERIENCED",
-                    text: "Autora Construction Services are committed to meeting the highest quality standards without compromising our safety culture.."
+                    text: "Maxbuild Construction Services are committed to meeting the highest quality standards without compromising our safety culture.."
                 }
             ]
         }

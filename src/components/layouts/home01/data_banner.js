@@ -1,7 +1,7 @@
 const bannerhome1 = [
     {
         id: 1,
-        srcimg: 'assets/img/slider/slider-bg-2.jpg',
+        srcimg: 'assets/img/slider/slider-new-2.jpg',
         classnames: 'tp-caption tp-resizeme text-white font-heading font-weight-600',
         classtext: 'tp-caption tp-resizeme text-white font-heading font-weight-700',
         datax: "['left','left','left','center']",
@@ -10,7 +10,10 @@ const bannerhome1 = [
         datavset2: "['-63','-63','-63','-63']",
         datavset3: "['2','2','2','2']",
         datavset: "['106','106','106','106']",
-        classbtn: "tp-caption"
+        classbtn: "tp-caption",
+        titleSmall: "A GLOBAL LEADER IN INFRASTRUCTURE",
+        titleMain: "WE WILL BE HAPPY",
+        titleSub: "TO TAKE CARE OF YOUR WORK",
     },
     {
         id: 2,
@@ -23,11 +26,14 @@ const bannerhome1 = [
         datavset2: "['-63','-63','-63','-63']",
         datavset3: "['2','2','2','2']",
         datavset: "['106','106','106','106']",
-        classbtn: "tp-caption text-center"
+        classbtn: "tp-caption text-center",
+        titleSmall: "BUILDING THE FUTURE",
+        titleMain: "QUALITY & TRUST",
+        titleSub: "DELIVERED ON TIME",
     },
     {
         id: 3,
-        srcimg: 'assets/img/slider/slider-new-2.jpg',
+        srcimg: 'assets/img/slider/slider-new-5.jpeg',
         classnames: 'tp-caption tp-resizeme text-white font-heading font-weight-600 text-right',
         classtext: 'tp-caption tp-resizeme text-white font-heading font-weight-700 text-right',
         datax: "['right','right','right','center']",
@@ -36,7 +42,10 @@ const bannerhome1 = [
         datavset2: "['-63','-63','-63','-63']",
         datavset3: "['2','2','2','2']",
         datavset: "['106','106','106','106']",
-        classbtn: "tp-caption text-right"
+        classbtn: "tp-caption text-right",
+        titleSmall: "SMART CONSTRUCTION",
+        titleMain: "INNOVATIVE SOLUTIONS",
+        titleSub: "FOR MODERN PROJECTS",
     }
 ]
 

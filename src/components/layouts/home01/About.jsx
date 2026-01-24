@@ -40,9 +40,9 @@ class About extends Component {
                             <div className="themesflat-spacer clearfix" data-desktop={64} data-mobile={60} data-smobile={60} />
                             <div className="themesflat-content-box clearfix" data-margin="0 25% 0 4.5%" data-mobilemargin="0 0 0 4.5%">
                                 <div className="themesflat-headings style-1 clearfix">
-                                    <h2 className="heading">WELCOME TO AUTORA</h2>
+                                    <h2 className="heading">WELCOME TO MAXBUILD</h2>
                                     <div className="sep has-width w80 accent-bg margin-top-11 clearfix" />                                               
-                                    <p className="sub-heading margin-top-30">We have successfully completed projects in numerous states across the continental United States. Autora Construction Services has a proven track record of:</p>
+                                    <p className="sub-heading margin-top-30">We have successfully completed projects in numerous states across the India. Maxbuild Construction Services has a proven track record of:</p>
                                 </div>
                                 <div className="themesflat-spacer clearfix" data-desktop={26} data-mobile={35} data-smobile={35} />
                                 <div className="content-list">
