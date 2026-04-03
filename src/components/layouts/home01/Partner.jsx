@@ -7,58 +7,58 @@ class Partner extends Component {
             partner: [
                 {
                     id: 1,
-                    img: 'assets/img/partners/partner-1.png',
+                    img: 'assets/img/partners/capacite-logo.png',
                     imgcolor: 'assets/img/partners/partner-1-color.png'
                 },
                 {
                     id: 2,
-                    img: 'assets/img/partners/partner-2.png',
+                    img: 'assets/img/partners/eversendai-logo.png',
                     imgcolor: 'assets/img/partners/partner-2-color.png'
                 },
                 {
                     id: 3,
-                    img: 'assets/img/partners/partner-3.png',
+                    img: 'assets/img/partners/indiabulls-logo.png',
                     imgcolor: 'assets/img/partners/partner-3-color.png'
                 },
                 {
                     id: 4,
-                    img: 'assets/img/partners/partner-4.png',
+                    img: 'assets/img/partners/oberoi-logo.png',
                     imgcolor: 'assets/img/partners/partner-4-color.png'
                 },
                 {
                     id: 5,
-                    img: 'assets/img/partners/partner-5.png',
+                    img: 'assets/img/partners/nathani-logo.avif',
                     imgcolor: 'assets/img/partners/partner-5-color.png'
                 },
                 {
                     id: 6,
-                    img: 'assets/img/partners/partner-1.png',
+                    img: 'assets/img/partners/runwal-logo.png',
                     imgcolor: 'assets/img/partners/partner-1-color.png'
                 },
                 {
                     id: 7,
-                    img: 'assets/img/partners/partner-2.png',
+                    img: 'assets/img/partners/raheja-logo.jpg',
                     imgcolor: 'assets/img/partners/partner-2-color.png'
                 },
                 {
                     id: 8,
-                    img: 'assets/img/partners/partner-3.png',
+                    img: 'assets/img/partners/shapoorji-logo.png',
                     imgcolor: 'assets/img/partners/partner-3-color.png'
                 },
                 {
                     id: 9,
-                    img: 'assets/img/partners/partner-4.png',
+                    img: 'assets/img/partners/lodha-logo.png',
                     imgcolor: 'assets/img/partners/partner-4-color.png'
                 },
                 {
                     id: 10,
-                    img: 'assets/img/partners/partner-5.png',
+                    img: 'assets/img/partners/sheth-logo.png',
                     imgcolor: 'assets/img/partners/partner-5-color.png'
                 }
             ]
         }
     }
-    
+
     render() {
         return (
             <div className="row-partner">
@@ -70,7 +70,7 @@ class Partner extends Component {
                                 data-column3={2} data-auto="true">
                                 <div className="owl-carousel owl-theme">
                                     {
-                                        this.state.partner.map(data =>(
+                                        this.state.partner.map(data => (
                                             <div className="themesflat-partner style-1 align-center clearfix" key={data.id}>
                                                 <div className="partner-item">
                                                     <div className="inner">

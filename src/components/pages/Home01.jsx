@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-import {Slider, TitleHeading, IconBox, About, Service, Project, ServicesBox, Testimonial, Overview, Faq, Partner} from '../layouts/home01/index'
-import {Header, Footer, TopBar, BottomBar} from '../layouts/general/index'
+import { Link } from 'react-router-dom'
+import { Slider, TitleHeading, IconBox, About, Service, Project, ServicesBox, Testimonial, Overview, Faq, Partner } from '../layouts/home01/index'
+import { Header, Footer, TopBar, BottomBar } from '../layouts/general/index'
 
 class Home01 extends Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class Home01 extends Component {
                 {
                     id: 1,
                     classnames: 'heading',
-                    title: 'BEST SERVICES 1',
+                    title: 'BEST SERVICES',
                     text: 'Construction Services offers a full range of construction services from initial design to project completion.',
                     classtext: 'sub-heading',
                 }
@@ -52,7 +52,7 @@ class Home01 extends Component {
             ]
         }
     }
-    
+
     render() {
         return (
             <div className="header-fixed page no-sidebar header-style-2 topbar-style-2 menu-has-search">
@@ -61,8 +61,8 @@ class Home01 extends Component {
                         <div id="site-header-wrap">
                             <TopBar />
                             {
-                                this.state.headers.map((data,idx) =>(
-                                    <Header data={data} key={idx}/>
+                                this.state.headers.map((data, idx) => (
+                                    <Header data={data} key={idx} />
                                 ))
                             }
                         </div>
@@ -73,8 +73,8 @@ class Home01 extends Component {
                                         <div className="page-content">
                                             <div className="rev_slider_wrapper fullwidthbanner-container">
                                                 <div id="rev-slider1" className="rev_slider fullwidthabanner">
-                                                    <Slider/>
-                                                </div> 
+                                                    <Slider />
+                                                </div>
                                             </div>
                                             <div className="row-iconbox">
                                                 <div className="container">
@@ -83,13 +83,13 @@ class Home01 extends Component {
                                                             <div className="themesflat-spacer clearfix" data-desktop={60} data-mobile={60} data-smobile={60} />
                                                             {
                                                                 this.state.headingchoose.map(data => (
-                                                                    <TitleHeading data={data} key={data.id}/>
+                                                                    <TitleHeading data={data} key={data.id} />
                                                                 ))
                                                             }
                                                             <div className="themesflat-spacer clearfix" data-desktop={42} data-mobile={35} data-smobile={35} />
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <IconBox />
                                                     <div className="row">
                                                         <div className="col-md-12">
@@ -110,15 +110,15 @@ class Home01 extends Component {
                                                             <div className="themesflat-spacer clearfix" data-desktop={60} data-mobile={60} data-smobile={60} />
                                                             {
                                                                 this.state.headingservice.map(data => (
-                                                                    <TitleHeading data={data} key={data.id}/>
+                                                                    <TitleHeading data={data} key={data.id} />
                                                                 ))
                                                             }
                                                             <div className="themesflat-spacer clearfix" data-desktop={39} data-mobile={35} data-smobile={35} />
                                                             <Service />
                                                             <div className="themesflat-spacer clearfix" data-desktop={50} data-mobile={35} data-smobile={35} />
-                                                            <div className="elm-button text-center">
+                                                            {/* <div className="elm-button text-center">
                                                                 <Link to="#" className="themesflat-button bg-accent">ALL SERVICES</Link>
-                                                            </div>
+                                                            </div> */}
                                                             <div className="themesflat-spacer clearfix" data-desktop={73} data-mobile={60} data-smobile={60} />
                                                         </div>
                                                     </div>
@@ -132,11 +132,11 @@ class Home01 extends Component {
                                                                 <div className="themesflat-spacer clearfix" data-desktop={60} data-mobile={60} data-smobile={60} />
                                                                 {
                                                                     this.state.headingproject.map(data => (
-                                                                        <TitleHeading data={data} key={data.id}/>
+                                                                        <TitleHeading data={data} key={data.id} />
                                                                     ))
                                                                 }
                                                                 <div className="themesflat-spacer clearfix" data-desktop={30} data-mobile={35} data-smobile={35} />
-                                                                
+
                                                                 <Project />
                                                                 <div className="themesflat-spacer clearfix" data-desktop={41} data-mobile={35} data-smobile={35} />
                                                                 <div className="elm-button text-center">
@@ -155,7 +155,7 @@ class Home01 extends Component {
                                                             <div className="themesflat-spacer clearfix" data-desktop={61} data-mobile={60} data-smobile={60} />
                                                             {
                                                                 this.state.servicebox.map(data => (
-                                                                    <TitleHeading data={data} key={data.id}/>
+                                                                    <TitleHeading data={data} key={data.id} />
                                                                 ))
                                                             }
                                                             <div className="themesflat-spacer clearfix" data-desktop={57} data-mobile={35} data-smobile={35} />
@@ -177,14 +177,14 @@ class Home01 extends Component {
                                                             <div className="themesflat-spacer clearfix" data-desktop={40} data-mobile={60} data-smobile={60} />
                                                             <div className="themesflat-quote style-1 clearfix">
                                                                 <div className="quote-item">
-                                                                <div className="inner">
-                                                                    <div className="heading-wrap">
-                                                                    <h3 className="heading">START EXECUTING YOUR PROJECT</h3>
+                                                                    <div className="inner">
+                                                                        <div className="heading-wrap">
+                                                                            <h3 className="heading">START EXECUTING YOUR PROJECT</h3>
+                                                                        </div>
+                                                                        <div className="button-wrap has-icon icon-left">
+                                                                            <Link to="#" className="themesflat-button bg-white small"><span>(+613) 8376 6284 <span className="icon"><i className="autora-icon-phone-contact" /></span></span></Link>
+                                                                        </div>
                                                                     </div>
-                                                                    <div className="button-wrap has-icon icon-left">
-                                                                    <Link to="#" className="themesflat-button bg-white small"><span>(+613) 8376 6284 <span className="icon"><i className="autora-icon-phone-contact" /></span></span></Link>
-                                                                    </div>
-                                                                </div>
                                                                 </div>
                                                             </div>
                                                             <div className="themesflat-spacer clearfix" data-desktop={31} data-mobile={60} data-smobile={60} />
@@ -213,8 +213,8 @@ class Home01 extends Component {
                         </div>
                         <Footer />
                         {
-                            this.state.headers.map((data,idx) =>(
-                                <BottomBar data={data} key={idx}/>
+                            this.state.headers.map((data, idx) => (
+                                <BottomBar data={data} key={idx} />
                             ))
                         }
                     </div>
