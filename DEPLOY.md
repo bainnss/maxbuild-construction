@@ -1,61 +1,60 @@
-# Deploy MaxBuild (Vercel + free backend)
+# Deploy MaxBuild (Vercel + MongoDB Atlas + Cloudinary)
 
-You still deploy **one site on Vercel**. The API is part of this project (`/api`).  
-Data lives in free **MongoDB Atlas**. Images live in free **Cloudinary**.
+One Vercel project serves both:
+- **Frontend** — Vite build output (`dist/`)
+- **API** — Express app via `api/index.js` (serverless)
 
-After this, edits on one computer appear on every other computer.
+## Before you deploy (checklist)
 
-## 1. MongoDB Atlas (free database)
+### 1. MongoDB Atlas
+1. Create a free M0 cluster
+2. Database user with password
+3. Network Access → allow `0.0.0.0/0`
+4. Copy connection string (`mongodb+srv://...`)
 
-1. Sign up at [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
-2. Create a **free M0** cluster
-3. Create a database user (username + password)
-4. Network Access → **Allow Access from Anywhere** (`0.0.0.0/0`)  
-   (needed for Vercel serverless IPs)
-5. Database → Connect → Drivers → copy the connection string  
-   Example: `mongodb+srv://USER:PASSWORD@cluster0.xxxxx.mongodb.net/maxbuild?retryWrites=true&w=majority`
+### 2. Cloudinary
+Copy **Cloud name**, **API Key**, **API Secret** from the dashboard.
 
-## 2. Cloudinary (free image hosting)
-
-1. Sign up at [https://cloudinary.com](https://cloudinary.com)
-2. Dashboard → copy **Cloud name**, **API Key**, **API Secret**
-
-## 3. Local setup
-
+### 3. Local sanity check
 ```bash
 copy .env.example .env
-```
-
-Fill in `.env`, then:
-
-```bash
+# fill MONGODB_URI, JWT_SECRET, ADMIN_*, CLOUDINARY_*
 npm install
 npm run seed
 npm run dev
 ```
-
-- Website: http://localhost:5173
+- Site: http://localhost:5173  
 - Admin: http://localhost:5173/admin  
-  Default login: `admin` / `Pass@123` (or whatever you set in `.env`)
+- API health: http://localhost:8787/api/health → `{"ok":true}`
 
-## 4. Vercel deploy
+### 4. Push this repo (including `api/index.js` + `vercel.json`)
 
-1. Push this repo to GitHub
-2. Import the repo in [Vercel](https://vercel.com)
-3. Add the same env vars as `.env`:
-   - `MONGODB_URI`
-   - `JWT_SECRET` (use a long random string)
-   - `ADMIN_USERNAME`
-   - `ADMIN_PASSWORD`
-   - `CLOUDINARY_CLOUD_NAME`
-   - `CLOUDINARY_API_KEY`
-   - `CLOUDINARY_API_SECRET`
-4. Deploy
+### 5. Vercel project settings
+Import the GitHub repo, then set:
+
+| Setting | Value |
+|---|---|
+| Framework Preset | **Other** (builds are defined in `vercel.json`) |
+| Root Directory | `.` (repo root) |
+| Build / Output overrides | **Leave empty** — `vercel.json` owns them |
+
+Add **Environment Variables** (Production + Preview):
+- `MONGODB_URI`
+- `JWT_SECRET` (long random string)
+- `ADMIN_USERNAME`
+- `ADMIN_PASSWORD`
+- `CLOUDINARY_CLOUD_NAME`
+- `CLOUDINARY_API_KEY`
+- `CLOUDINARY_API_SECRET`
+
+### 6. After deploy — verify in this order
+1. Open **Deployment → Functions** — you must see `api/index.js` (or `api`).
+2. Visit `https://YOUR_DOMAIN/api/health` → `{"ok":true}`  
+   If you still see Vercel `404 NOT_FOUND`, the function was not built (settings override or old deploy).
+3. Then try admin login.
 
 Change `ADMIN_PASSWORD` before giving the site to the client.
 
 ## What you do NOT need
-
 - A separate backend host (Render/Railway/etc.)
 - A VPS
-- Paid plans for a normal company brochure + CMS
