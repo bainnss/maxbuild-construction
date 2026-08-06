@@ -1,0 +1,278 @@
+export const projects = [
+  {
+    id: 1,
+    slug: 'harborview-tower',
+    name: 'Harborview Tower',
+    location: 'San Francisco, CA',
+    completionDate: '2024',
+    area: '420,000 sq ft',
+    industry: 'Commercial',
+    category: 'Commercial',
+    status: 'Completed',
+    client: 'Aether Realty Group',
+    shortDescription:
+      'A 42-story mixed-use tower defining the Embarcadero skyline with LEED Platinum performance.',
+    description:
+      'Harborview Tower is a landmark mixed-use development combining Class-A office, curated retail, and elevated residential amenities. MaxBuild delivered structural steel, envelope systems, and interior fit-outs under an aggressive dual-phase schedule.',
+    image:
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80',
+    ],
+    timeline: '36 months',
+    constructionType: 'Design-Build / High-Rise',
+    challenges: [
+      'Constrained waterfront site with active ferry operations',
+      'Complex curtain wall geometry requiring millimetre tolerances',
+      'Phased occupancy while lower floors remained under construction',
+    ],
+    solutions: [
+      'Modular prefabrication of façade panels off-site',
+      'Digital twin coordination across 18 trade partners',
+      'Night-shift logistics program synchronized with port schedules',
+    ],
+    materials: ['Structural steel', 'High-performance glass', 'Reinforced concrete', 'Stone cladding'],
+    technologies: ['BIM 360', 'Laser scanning', 'Prefabricated MEP', 'Smart building systems'],
+    highlights: [
+      'LEED Platinum certification',
+      '42 stories completed on schedule',
+      'Zero lost-time incidents in final 18 months',
+    ],
+    featured: true,
+  },
+  {
+    id: 2,
+    slug: 'aurora-residences',
+    name: 'Aurora Residences',
+    location: 'Austin, TX',
+    completionDate: '2025',
+    area: '185,000 sq ft',
+    industry: 'Residential',
+    category: 'Residential',
+    status: 'Completed',
+    client: 'Summit Living',
+    shortDescription:
+      'Luxury waterfront residences with private courtyards, wellness amenities, and sculptural architecture.',
+    description:
+      'Aurora Residences redefines urban living along Lady Bird Lake with 96 residences, curated gardens, and a wellness pavilion. MaxBuild executed complex concrete formwork and bespoke millwork finishes.',
+    image:
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80',
+    ],
+    timeline: '28 months',
+    constructionType: 'Luxury Residential',
+    challenges: [
+      'Flood-plain foundation constraints',
+      'High-spec custom interiors across unique unit layouts',
+    ],
+    solutions: [
+      'Elevated podium with resilient waterproofing system',
+      'Dedicated finish package teams per residential stack',
+    ],
+    materials: ['Architectural concrete', 'White oak millwork', 'Natural stone', 'Bronze metalwork'],
+    technologies: ['Revit Coordination', 'Quality tracking app', 'Prefabricated bathroom pods'],
+    highlights: ['100% unit pre-sales at launch', 'Four design awards', 'Net-zero ready envelope'],
+    featured: true,
+  },
+  {
+    id: 3,
+    slug: 'pacific-logistics-hub',
+    name: 'Pacific Logistics Hub',
+    location: 'Long Beach, CA',
+    completionDate: '2023',
+    area: '1.2M sq ft',
+    industry: 'Industrial',
+    category: 'Industrial',
+    status: 'Completed',
+    client: 'Vertex Logistics',
+    shortDescription:
+      'Next-generation fulfillment campus with automated racking, rail spur, and carbon-aware power systems.',
+    description:
+      'A regional distribution campus engineered for 24/7 throughput. MaxBuild delivered tilt-up construction, heavy power infrastructure, and coordinated automation vendor installation.',
+    image:
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1565793298595-6a901d1a2c1e?auto=format&fit=crop&w=1400&q=80',
+    ],
+    timeline: '22 months',
+    constructionType: 'Industrial / Tilt-Up',
+    challenges: ['Accelerated schedule for peak season readiness', 'Integration of robotics infrastructure'],
+    solutions: ['Parallel trade stacking with digital scheduling', 'Early vendor co-location on site'],
+    materials: ['Tilt-up concrete', 'Structural steel', 'High-bay lighting', 'Epoxy flooring'],
+    technologies: ['Automated storage systems', 'SCADA monitoring', 'Solar canopy array'],
+    highlights: ['Delivered 6 weeks early', '1.2M sq ft under roof', 'On-site solar covers 40% demand'],
+    featured: true,
+  },
+  {
+    id: 4,
+    slug: 'metro-transit-bridge',
+    name: 'Metro Transit Bridge',
+    location: 'Seattle, WA',
+    completionDate: '2024',
+    area: '2.4 km span',
+    industry: 'Infrastructure',
+    category: 'Infrastructure',
+    status: 'Completed',
+    client: 'Pacific Rail Authority',
+    shortDescription:
+      'Cable-stayed transit bridge connecting downtown with a new waterfront district.',
+    description:
+      'An iconic cable-stayed bridge carrying light rail, cyclists, and pedestrians. MaxBuild led marine foundations, tower erection, and deck segmental construction.',
+    image:
+      'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80',
+    ],
+    timeline: '48 months',
+    constructionType: 'Civil / Marine',
+    challenges: ['Deep marine foundations', 'Live shipping channel constraints'],
+    solutions: ['Cofferdam construction windows', 'GPS-guided segmental placement'],
+    materials: ['Post-tensioned concrete', 'High-strength cable', 'Weathering steel'],
+    technologies: ['Structural health monitoring', '4D construction sequencing'],
+    highlights: ['Award-winning civic landmark', 'Zero navigational incidents', 'Seismic performance category D'],
+    featured: true,
+  },
+  {
+    id: 5,
+    slug: 'lumen-medical-campus',
+    name: 'Lumen Medical Campus',
+    location: 'Denver, CO',
+    completionDate: '2025',
+    area: '310,000 sq ft',
+    industry: 'Healthcare',
+    category: 'Commercial',
+    status: 'Completed',
+    client: 'Nova Hospitals',
+    shortDescription:
+      'State-of-the-art medical campus with surgical suites, research labs, and healing gardens.',
+    description:
+      'A healthcare campus designed for clinical excellence and patient wellbeing. MaxBuild delivered infection-controlled environments, redundant MEP systems, and healing landscape integration.',
+    image:
+      'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1400&q=80',
+    ],
+    timeline: '32 months',
+    constructionType: 'Healthcare / IPD',
+    challenges: ['Strict infection control during phased occupancy', 'Complex medical gas systems'],
+    solutions: ['ICRA protocols with dedicated containment zones', 'Prefabricated medical headwalls'],
+    materials: ['Antimicrobial surfaces', 'Copper fixtures', 'Acoustic ceiling systems'],
+    technologies: ['Integrated project delivery', 'Digital QA/QC', 'Smart nurse call systems'],
+    highlights: ['Joint Commission ready on day one', 'Healing garden certified', 'Energy Star score 92'],
+    featured: false,
+  },
+  {
+    id: 6,
+    slug: 'horizon-hotel-collection',
+    name: 'Horizon Hotel Collection',
+    location: 'Miami, FL',
+    completionDate: '2023',
+    area: '265,000 sq ft',
+    industry: 'Hospitality',
+    category: 'Commercial',
+    status: 'Completed',
+    client: 'Horizon Hotels',
+    shortDescription:
+      'Boutique waterfront hotel with dramatic atriums, spa levels, and ocean-facing suites.',
+    description:
+      'A hospitality landmark along Biscayne Bay featuring expressive concrete architecture, luxury guest finishes, and resort-scale amenities.',
+    image:
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=80',
+    ],
+    timeline: '30 months',
+    constructionType: 'Hospitality',
+    challenges: ['Hurricane-rated envelope', 'High-end FF&E coordination'],
+    solutions: ['Impact-rated glazing system', 'White-glove installation sequencing'],
+    materials: ['Impact glass', 'Terrazzo', 'Tropical hardwoods', 'Custom metal screens'],
+    technologies: ['Guest experience IoT', 'Central plant optimization'],
+    highlights: ['Five-star opening rating', 'Hurricane Category 5 envelope', 'Rooftop infinity pool'],
+    featured: false,
+  },
+  {
+    id: 7,
+    slug: 'atlas-energy-plant',
+    name: 'Atlas Energy Plant',
+    location: 'Phoenix, AZ',
+    completionDate: '2026',
+    area: '95 acres',
+    industry: 'Energy',
+    category: 'Industrial',
+    status: 'In Progress',
+    client: 'Atlas Energy',
+    shortDescription:
+      'Utility-scale clean energy facility with advanced concrete foundations and control buildings.',
+    description:
+      'A large-scale renewable energy campus including inverter stations, operations center, and heavy civil works across desert terrain.',
+    image:
+      'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80',
+    ],
+    timeline: '40 months',
+    constructionType: 'Energy / Civil',
+    challenges: ['Extreme heat work windows', 'Remote logistics'],
+    solutions: ['Night construction cycles', 'Regional prefabrication yards'],
+    materials: ['Mass concrete', 'Galvanized steel', 'Composite cladding'],
+    technologies: ['Drone progress tracking', 'Thermal monitoring'],
+    highlights: ['500 MW capacity target', 'Indigenous workforce partnership'],
+    featured: false,
+  },
+  {
+    id: 8,
+    slug: 'ridgecrest-campus',
+    name: 'Ridgecrest Innovation Campus',
+    location: 'San Jose, CA',
+    completionDate: '2024',
+    area: '540,000 sq ft',
+    industry: 'Technology',
+    category: 'Commercial',
+    status: 'Completed',
+    client: 'Lumina Tech',
+    shortDescription:
+      'Campus of interconnected research buildings with atriums, labs, and collaborative plazas.',
+    description:
+      'A technology campus emphasizing daylight, collaboration, and flexible lab infrastructure. MaxBuild delivered three buildings and a central commons under a single master schedule.',
+    image:
+      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80',
+    ],
+    timeline: '34 months',
+    constructionType: 'Campus / Lab',
+    challenges: ['Active campus adjacency', 'Vibration-sensitive lab floors'],
+    solutions: ['Isolated structural slabs', 'Weekend critical path moves'],
+    materials: ['Exposed concrete', 'Curtain wall', 'Acoustic glass'],
+    technologies: ['Lab gas manifolds', 'Smart BMS', 'BIM clash detection'],
+    highlights: ['WELL Gold certification', 'Campus opened in phases', 'Zero punch-list critical items'],
+    featured: true,
+  },
+]
+
+export const getProjectBySlug = (slug) => projects.find((p) => p.slug === slug)
+
+export const getFeaturedProjects = () => projects.filter((p) => p.featured)
+
+export const getRelatedProjects = (slug, limit = 3) =>
+  projects.filter((p) => p.slug !== slug).slice(0, limit)
