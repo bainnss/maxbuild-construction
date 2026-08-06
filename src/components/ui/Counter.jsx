@@ -31,18 +31,18 @@ export default function Counter({
   }, [inView, value, duration])
 
   return (
-    <div ref={ref} className={cn('text-center', className)}>
+    <div ref={ref} className={cn('min-w-0 text-center', className)}>
       <motion.p
         initial={{ opacity: 0, y: 16 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
-        className="font-display text-4xl font-semibold text-white md:text-5xl lg:text-6xl"
+        className="font-display text-3xl font-semibold text-white sm:text-4xl md:text-5xl lg:text-6xl"
       >
         {prefix}
         {count.toLocaleString()}
         {suffix}
       </motion.p>
-      <p className="mt-3 text-xs font-medium uppercase tracking-[0.22em] text-slate-400 md:text-sm">
+      <p className="mt-2 max-w-[12rem] text-[10px] leading-snug font-medium uppercase tracking-[0.14em] text-slate-400 sm:mt-3 sm:max-w-none sm:text-xs sm:tracking-[0.22em] md:text-sm">
         {label}
       </p>
     </div>
