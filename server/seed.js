@@ -1,7 +1,6 @@
 import dotenv from 'dotenv'
-import bcrypt from 'bcryptjs'
 import { connectDb } from './db.js'
-import { User } from './models/User.js'
+import { ensureAdminUser } from './ensureAdmin.js'
 import { Project } from './models/Project.js'
 import { Service } from './models/Service.js'
 import { TeamMember } from './models/TeamMember.js'
@@ -13,6 +12,8 @@ import { mergeSettings } from '../src/admin/data/settingsDefaults.js'
 
 dotenv.config()
 
+export { ensureAdminUser }
+
 const stripMeta = (doc) => {
   const next = { ...doc }
   delete next.id
@@ -20,21 +21,6 @@ const stripMeta = (doc) => {
   delete next.createdAt
   delete next.updatedAt
   return next
-}
-
-export async function ensureAdminUser() {
-  const username = process.env.ADMIN_USERNAME || 'admin'
-  const existing = await User.findOne({ username })
-  if (existing) return existing
-
-  const password = process.env.ADMIN_PASSWORD || 'Pass@123'
-  const passwordHash = await bcrypt.hash(password, 10)
-  return User.create({
-    username,
-    passwordHash,
-    name: 'MaxBuild Admin',
-    role: 'Administrator',
-  })
 }
 
 export async function seedDatabase({ force = false } = {}) {

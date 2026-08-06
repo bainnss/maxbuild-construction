@@ -2,6 +2,7 @@ import express from 'express'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import { connectDb } from './db.js'
+import { ensureAdminUser } from './ensureAdmin.js'
 import authRoutes from './routes/auth.js'
 import projectRoutes from './routes/projects.js'
 import serviceRoutes from './routes/services.js'
@@ -23,17 +24,33 @@ app.use(
 app.use(express.json({ limit: '2mb' }))
 app.use(cookieParser())
 
+// Liveness — no DB required (so we can tell function vs database failures apart)
+app.get('/api/health', (_req, res) => {
+  res.json({ ok: true })
+})
+
+app.get('/api/health/db', async (_req, res) => {
+  try {
+    await connectDb()
+    await ensureAdminUser()
+    res.json({ ok: true, db: true })
+  } catch (err) {
+    res.status(500).json({
+      ok: false,
+      db: false,
+      message: err.message || 'Database connection failed',
+    })
+  }
+})
+
 app.use(async (_req, _res, next) => {
   try {
     await connectDb()
+    await ensureAdminUser()
     next()
   } catch (err) {
     next(err)
   }
-})
-
-app.get('/api/health', (_req, res) => {
-  res.json({ ok: true })
 })
 
 app.use('/api/auth', authRoutes)

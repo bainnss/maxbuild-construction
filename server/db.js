@@ -18,12 +18,18 @@ export async function connectDb() {
 
   if (!globalCache.__maxbuildMongoose.promise) {
     // Serverless-friendly: small pool, no min pool, prune idle sockets.
-    globalCache.__maxbuildMongoose.promise = mongoose.connect(uri, {
-      bufferCommands: false,
-      maxPoolSize: 5,
-      serverSelectionTimeoutMS: 12000,
-      maxIdleTimeMS: 30000,
-    })
+    // Reset promise on failure so the next request can retry.
+    globalCache.__maxbuildMongoose.promise = mongoose
+      .connect(uri, {
+        bufferCommands: false,
+        maxPoolSize: 5,
+        serverSelectionTimeoutMS: 12000,
+        maxIdleTimeMS: 30000,
+      })
+      .catch((err) => {
+        globalCache.__maxbuildMongoose.promise = null
+        throw err
+      })
   }
 
   globalCache.__maxbuildMongoose.conn = await globalCache.__maxbuildMongoose.promise
