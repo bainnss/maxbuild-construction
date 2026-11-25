@@ -12,15 +12,24 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="Services"
-        description="Explore MaxBuild Infrastructure services — residential, commercial, industrial, infrastructure, design-build, and more."
+        title="Construction Services in Mumbai, Bhayander, Mira Road & Thane"
+        description="Explore MaxBuild Infrastructure's full-spectrum construction services — residential, commercial, industrial, infrastructure, design-build, renovation, interior fit-outs, and more in Mumbai, Bhayander, Mira Road & Thane."
         path="/services"
         image={IMAGES.steel}
+        keywords={[
+          'construction services Mumbai',
+          'residential construction Bhayander',
+          'commercial construction Mira Road',
+          'building services Thane',
+          'renovation contractors Mumbai',
+          'interior fit-out Bhayander',
+          'design build Thane',
+        ]}
       />
       <PageHero
         eyebrow="Services"
         title="Full-spectrum construction expertise."
-        description="Ten integrated capabilities designed to take ambitious projects from vision to enduring reality."
+        description="Integrated capabilities designed to take ambitious projects from vision to enduring reality across Mumbai, Bhayander, Mira Road & Thane."
         image={IMAGES.machinery}
       />
       <section className="section-pad">

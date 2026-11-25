@@ -15,15 +15,22 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact"
-        description={`Contact ${company.name}. Reach our project desk for consultations, proposals, and partnership inquiries.`}
+        title="Contact Us — Free Consultation for Your Construction Project"
+        description={`Contact ${company.name} for a free consultation. Best construction company in Bhayander, Mira Road, Thane & Mumbai. Call +91 22 4000 1234 or visit our office. We respond within one business day.`}
         path="/contact"
         image={IMAGES.contact}
+        keywords={[
+          'contact construction company Mumbai',
+          'free construction consultation Bhayander',
+          'building contractors contact Mira Road',
+          'construction company phone number Thane',
+          'get construction quote Mumbai',
+        ]}
       />
       <PageHero
         eyebrow="Contact"
         title="Let's start the conversation."
-        description={company.contactNote || 'Share your vision. Our project desk responds within one business day.'}
+        description={company.contactNote || 'Share your vision. Our project desk responds within one business day. Free consultation for all Mumbai, Bhayander, Mira Road & Thane projects.'}
         image={IMAGES.contact}
       />
 

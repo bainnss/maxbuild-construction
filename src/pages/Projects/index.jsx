@@ -24,10 +24,17 @@ export default function Projects() {
   return (
     <>
       <SEO
-        title="Projects"
-        description="Browse MaxBuild Infrastructure's portfolio of landmark residential, commercial, industrial, and infrastructure projects."
+        title="Our Construction Projects — Mumbai, Bhayander, Mira Road & Thane"
+        description="Browse MaxBuild Infrastructure's portfolio of landmark residential, commercial, industrial, and infrastructure projects delivered across Mumbai, Bhayander, Mira Road, Thane and Maharashtra."
         path="/projects"
         image={IMAGES.about}
+        keywords={[
+          'construction projects Mumbai',
+          'completed projects Bhayander',
+          'building projects Mira Road',
+          'construction portfolio Thane',
+          'residential projects Mumbai',
+        ]}
       />
       <PageHero
         eyebrow="Projects"

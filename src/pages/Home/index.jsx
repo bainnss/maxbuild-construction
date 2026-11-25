@@ -19,9 +19,17 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Home"
-          description="MaxBuild Infrastructure delivers world-class residential, commercial, and industrial projects with uncompromising quality."
+        title="Best Construction Company in Mumbai, Bhayander, Mira Road & Thane"
+        description="MaxBuild Infrastructure Pvt Ltd — the best construction company in Mumbai, Bhayander, Mira Road & Thane. We deliver world-class residential, commercial, and industrial construction projects. 450+ projects delivered. Get a free consultation today!"
         path="/"
+        keywords={[
+          'best construction company Mumbai',
+          'top builders Bhayander',
+          'construction company Mira Road',
+          'building contractors Thane',
+          'residential construction Mumbai',
+          'commercial construction Bhayander',
+        ]}
       />
       <Hero />
       <LogoCarousel />

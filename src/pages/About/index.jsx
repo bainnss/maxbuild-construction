@@ -18,15 +18,21 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About Us"
-        description="Discover MaxBuild Infrastructure — our story, mission, values, and the leadership driving landmark projects worldwide."
+        title="About Us — Leading Construction Company Since 1998"
+        description="Learn about MaxBuild Infrastructure Pvt Ltd — Mumbai's trusted construction company since 1998. Our mission, values, leadership team, and 450+ landmark projects across Bhayander, Mira Road, Thane & Mumbai."
         path="/about"
         image={IMAGES.about}
+        keywords={[
+          'about MaxBuild Infrastructure',
+          'construction company history Mumbai',
+          'trusted builders Bhayander',
+          'experienced contractors Thane',
+        ]}
       />
       <PageHero
         eyebrow="About Us"
         title="Building with purpose since 1998."
-        description="A construction company forged by craftsmanship, elevated by engineering, and defined by the landmarks we leave behind."
+        description="A construction company forged by craftsmanship, elevated by engineering, and defined by the landmarks we leave behind across Mumbai, Bhayander, Mira Road & Thane."
         image={IMAGES.architecture}
       />
 
@@ -36,11 +42,11 @@ export default function About() {
             <div>
               <SectionTitle
                 eyebrow="Our Story"
-                title="From a San Francisco workshop to a national construction leader."
-                description="What began as a precision-focused general contractor has grown into a multi-disciplinary firm delivering residential, commercial, industrial, and infrastructure projects across the United States."
+                title="From a Bhayander workshop to a trusted Mumbai construction leader."
+                description="What began as a precision-focused general contractor has grown into a multi-disciplinary firm delivering residential, commercial, industrial, and infrastructure projects across Mumbai Metropolitan Region."
               />
               <p className="text-slate-400 leading-relaxed">
-                Today, MaxBuild combines design intelligence, field excellence, and digital project controls to deliver outcomes that developers, institutions, and cities trust for decades.
+                Today, MaxBuild combines design intelligence, field excellence, and modern project controls to deliver outcomes that developers, institutions, and communities across Mumbai, Thane, and Maharashtra trust for decades.
               </p>
             </div>
             <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-sm">
@@ -54,8 +60,8 @@ export default function About() {
         <Container>
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              { title: 'Mission', text: 'Deliver landmark construction with absolute integrity, technical excellence, and client partnership.' },
-              { title: 'Vision', text: 'Set the global standard for how ambitious buildings and infrastructure are conceived and built.' },
+              { title: 'Mission', text: 'Deliver landmark construction across Mumbai, Bhayander, Mira Road & Thane with absolute integrity, technical excellence, and client partnership.' },
+              { title: 'Vision', text: 'Set the standard for how ambitious buildings and infrastructure are conceived and built in Maharashtra.' },
               { title: 'Philosophy', text: 'Build once. Build right. Build for generations — with safety, craft, and accountability.' },
             ].map((item, i) => (
               <motion.div

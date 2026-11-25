@@ -14,15 +14,22 @@ export default function Careers() {
   return (
     <>
       <SEO
-        title="Careers"
-        description="Join MaxBuild Infrastructure. Explore open positions, benefits, and a culture built on craft and excellence."
+        title="Careers — Join the Best Construction Team in Mumbai"
+        description="Join MaxBuild Infrastructure. Explore open positions, benefits, and a culture built on craft and excellence. Construction jobs in Mumbai, Bhayander, Mira Road & Thane."
         path="/careers"
         image={IMAGES.workers}
+        keywords={[
+          'construction jobs Mumbai',
+          'civil engineer jobs Bhayander',
+          'construction careers Thane',
+          'building jobs Mira Road',
+          'construction company hiring Mumbai',
+        ]}
       />
       <PageHero
         eyebrow="Careers"
         title="Build your career on landmarks."
-        description="Join a team where craftsmanship, safety, and ambition define every day on site and in studio."
+        description="Join a team where craftsmanship, safety, and ambition define every day on site and in studio. Opportunities across Mumbai, Bhayander & Thane."
         image={IMAGES.workers}
       />
 

@@ -29,9 +29,27 @@ export default function FAQ() {
   return (
     <>
       <SEO
-        title="FAQ"
-        description="Frequently asked questions about MaxBuild Infrastructure services, process, pricing, and partnerships."
+        title="FAQ — Construction Company Questions Answered"
+        description="Frequently asked questions about MaxBuild Infrastructure's construction services, process, pricing, and partnerships in Mumbai, Bhayander, Mira Road & Thane."
         path="/faq"
+        keywords={[
+          'construction company FAQ Mumbai',
+          'building contractors questions Bhayander',
+          'construction cost Mira Road',
+          'construction process Thane',
+        ]}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        }}
       />
       <PageHero
         eyebrow="FAQ"

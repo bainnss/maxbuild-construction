@@ -17,8 +17,9 @@ export const defaultSettings = () => ({
   footerContent: COMPANY.description,
   copyrightText: `© ${new Date().getFullYear()} ${COMPANY.name}. All rights reserved.`,
   contactNote: 'Our project desk responds within one business day.',
-  mapEmbedUrl: '',
-  mapLabel: 'San Francisco Headquarters',
+  mapLabel: 'MaxBuild Infrastructure — Bhayander West, Thane',
+  mapEmbedUrl:
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.123!2d72.8513!3d19.3015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBhayander+West!5e0!3m2!1sen!2sin!4v1700000000000',
 
   // Logos & media
   logoUrl: '', // full-color (loader / light surfaces)

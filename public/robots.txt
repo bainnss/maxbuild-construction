@@ -1,0 +1,27 @@
+# MaxBuild Infrastructure Pvt Ltd — robots.txt
+# https://maxbuildinfra.com
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemaps
+Sitemap: https://maxbuildinfra.com/sitemap.xml
+
+# Crawl-delay (optional, polite to bots)
+Crawl-delay: 1
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin

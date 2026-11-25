@@ -1,45 +1,45 @@
 export const testimonials = [
   {
     id: 1,
-    name: 'Rachel Whitmore',
-    role: 'CEO, Aether Realty Group',
-    company: 'Aether Realty',
+    name: 'Rajesh Mehta',
+    role: 'Director, Mehta Developers',
+    company: 'Mehta Developers',
     rating: 5,
     quote:
-      'MaxBuild delivered Harborview Tower with a level of precision and partnership we have never experienced. They anticipate problems before they exist.',
+      'MaxBuild delivered our premium residential tower in Bhayander with a level of precision and partnership we have never experienced. They anticipate problems before they exist.',
     image:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80',
   },
   {
     id: 2,
-    name: 'Thomas Hale',
-    role: 'VP Development, Summit Living',
-    company: 'Summit Living',
+    name: 'Priya Sharma',
+    role: 'VP Development, Horizon Properties',
+    company: 'Horizon Properties',
     rating: 5,
     quote:
-      'Aurora Residences exceeded every quality benchmark. The craftsmanship in the finishes and the discipline on schedule were exceptional.',
+      'Our Mira Road project exceeded every quality benchmark. The craftsmanship in the finishes and the discipline on schedule were exceptional.',
     image:
       'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
   },
   {
     id: 3,
-    name: 'Amira Hassan',
-    role: 'COO, Nova Hospitals',
-    company: 'Nova Hospitals',
+    name: 'Dr. Amit Patel',
+    role: 'COO, City Care Hospitals',
+    company: 'City Care Hospitals',
     rating: 5,
     quote:
-      'Healthcare construction demands absolute rigor. MaxBuild’s infection control protocols and commissioning process set a new standard for our system.',
+      'Healthcare construction demands absolute rigor. MaxBuild\'s infection control protocols and commissioning process set a new standard for our hospital in Thane.',
     image:
       'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80',
   },
   {
     id: 4,
-    name: 'Kevin Brooks',
-    role: 'Director, Pacific Rail Authority',
-    company: 'Pacific Rail',
+    name: 'Suresh Desai',
+    role: 'MD, Desai Industries',
+    company: 'Desai Industries',
     rating: 5,
     quote:
-      'The Metro Transit Bridge is a civic landmark delivered without a single navigational incident. That is world-class civil construction.',
+      'Our industrial facility in Mumbai was delivered without a single safety incident. That is world-class construction management by MaxBuild.',
     image:
       'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80',
   },
@@ -49,82 +49,96 @@ export const faqs = [
   {
     id: 1,
     category: 'General',
-    question: 'What types of projects does MaxBuild undertake?',
+    question: 'What types of construction projects does MaxBuild undertake in Mumbai?',
     answer:
-      'We deliver residential, commercial, industrial, infrastructure, healthcare, hospitality, and energy projects — from custom estates to multi-million square foot campuses and civil works.',
+      'We deliver residential, commercial, industrial, infrastructure, healthcare, hospitality, and energy projects across Mumbai, Bhayander, Mira Road, Thane, and the entire Mumbai Metropolitan Region \u2014 from luxury villas to multi-storey complexes and civil works.',
   },
   {
     id: 2,
     category: 'General',
-    question: 'Where does MaxBuild operate?',
+    question: 'Where does MaxBuild operate in Maharashtra?',
     answer:
-      'Our primary markets are across the United States, with project experience spanning major metros from San Francisco to Miami. We evaluate select international opportunities with strategic partners.',
+      'Our head office is in Bhayander West, Thane. We serve Mumbai, Bhayander, Mira Road, Thane, Dahisar, Borivali, Kandivali, Vasai, Virar, Navi Mumbai, and other areas across the Mumbai Metropolitan Region. We also take up select projects across Maharashtra.',
   },
   {
     id: 3,
     category: 'Process',
     question: 'How does your design-build process work?',
     answer:
-      'Design-build integrates architecture, engineering, and construction under one accountable team. Clients gain earlier cost certainty, faster schedules, and fewer coordination gaps compared to traditional delivery.',
+      'Design-build integrates architecture, engineering, and construction under one accountable team. Clients gain earlier cost certainty, faster schedules, and fewer coordination gaps compared to traditional delivery. We handle everything from MCGM approvals to final handover.',
   },
   {
     id: 4,
     category: 'Process',
-    question: 'What is a typical project timeline?',
+    question: 'What is a typical project timeline for construction in Mumbai?',
     answer:
-      'Timelines vary by scale and complexity. A mid-rise commercial project may span 18–30 months, while large infrastructure or campus programs can run 36–48 months. We provide detailed schedules during preconstruction.',
+      'Timelines vary by scale and complexity. A residential flat or bungalow project may span 12\u201318 months, a mid-rise commercial project 18\u201330 months, while large infrastructure programs can run 36\u201348 months. We provide detailed schedules during preconstruction.',
   },
   {
     id: 5,
     category: 'Pricing',
-    question: 'How do you approach project budgeting?',
+    question: 'How much does construction cost per square foot in Bhayander / Mira Road?',
     answer:
-      'We begin with conceptual estimating, refine through design development, and lock guaranteed maximum price (GMP) or lump-sum contracts when scope is sufficiently defined. Transparency is built into every estimate.',
+      'Construction costs depend on design, materials, and project type. For residential projects in Bhayander and Mira Road, rates typically range from \u20B91,800 to \u20B93,500 per sq ft for structure, and more for luxury finishes. We provide free, detailed estimates during consultation.',
   },
   {
     id: 6,
     category: 'Pricing',
     question: 'Do you offer free consultations?',
     answer:
-      'Yes. We offer complimentary discovery consultations for qualified projects to assess fit, timeline, and delivery approach before formal engagement.',
+      'Yes! We offer complimentary site visits and consultations for all projects in Mumbai, Bhayander, Mira Road, Thane, and surrounding areas. Call us at +91 22 4000 1234 or fill the contact form to schedule yours.',
   },
   {
     id: 7,
     category: 'Safety',
-    question: 'What is MaxBuild’s safety record?',
+    question: 'What is MaxBuild\'s safety record?',
     answer:
-      'Safety is non-negotiable. We maintain industry-leading EMR ratings and have achieved multi-year zero lost-time milestones on major programs through rigorous training and culture.',
+      'Safety is non-negotiable. We comply with all MCGM and Maharashtra construction safety regulations and maintain industry-leading safety records. We have achieved multi-year zero lost-time milestones on major programs through rigorous training and culture.',
   },
   {
     id: 8,
     category: 'Sustainability',
-    question: 'Can you deliver LEED, WELL, or net-zero projects?',
+    question: 'Can you deliver green or energy-efficient buildings in Mumbai?',
     answer:
-      'Absolutely. Our sustainability team embeds certification pathways into design and construction, with a strong track record in LEED Platinum, WELL, and net-zero-ready deliveries.',
+      'Absolutely. Our sustainability team embeds IGBC, GRIHA, and green building certification pathways into design and construction. We have delivered energy-efficient and eco-friendly projects across Mumbai and Thane.',
   },
   {
     id: 9,
     category: 'Careers',
     question: 'How can I join the MaxBuild team?',
     answer:
-      'Visit our Careers page to explore open positions. We hire across field operations, engineering, project management, design, and corporate functions.',
+      'Visit our Careers page to explore open positions. We hire civil engineers, architects, project managers, site supervisors, and other professionals across our Mumbai, Bhayander, and Thane offices.',
   },
   {
     id: 10,
     category: 'Process',
-    question: 'Do you work with existing design teams?',
+    question: 'Is MaxBuild RERA registered?',
     answer:
-      'Yes. We frequently collaborate as construction managers or general contractors with owner-selected architects and engineers, or we can lead as a full design-build partner.',
+      'Yes, MaxBuild Infrastructure Pvt Ltd complies with all RERA (Real Estate Regulatory Authority) requirements for Maharashtra. We ensure full transparency in all our residential and commercial projects.',
+  },
+  {
+    id: 11,
+    category: 'General',
+    question: 'Why should I choose MaxBuild over other construction companies in Bhayander?',
+    answer:
+      'With 450+ projects delivered, 28 years of experience, and a 98% client retention rate, MaxBuild is the most trusted construction company in Bhayander and surrounding areas. We offer end-to-end construction services, transparent pricing, on-time delivery, and unmatched quality.',
+  },
+  {
+    id: 12,
+    category: 'Process',
+    question: 'Do you handle MCGM approvals and building permissions?',
+    answer:
+      'Yes, we handle all MCGM approvals, building permissions, NOCs, environmental clearances, and regulatory compliance. Our team manages the entire approval process so you don\'t have to worry about paperwork.',
   },
 ]
 
 export const news = [
   {
     id: 1,
-    slug: 'harborview-tower-tops-out',
-    title: 'Harborview Tower Tops Out on the Embarcadero',
+    slug: 'new-residential-project-bhayander',
+    title: 'MaxBuild Launches Premium Residential Project in Bhayander West',
     excerpt:
-      'MaxBuild marks a major milestone as the final steel beam is signed by the full project team overlooking San Francisco Bay.',
+      'MaxBuild marks a major milestone with the launch of a 20-storey premium residential tower in Bhayander West, overlooking the creek.',
     date: '2024-11-12',
     category: 'Projects',
     image:
@@ -132,10 +146,10 @@ export const news = [
   },
   {
     id: 2,
-    slug: 'net-zero-roadmap-2030',
-    title: 'Announcing Our Net-Zero Construction Roadmap 2030',
+    slug: 'green-building-initiative-2030',
+    title: 'Announcing Our Green Building Initiative 2030',
     excerpt:
-      'A comprehensive plan to eliminate operational carbon across MaxBuild job sites and corporate operations by 2030.',
+      'A comprehensive plan to deliver IGBC-certified and energy-efficient buildings across all MaxBuild projects in Mumbai MMR.',
     date: '2025-01-20',
     category: 'Sustainability',
     image:
@@ -143,10 +157,10 @@ export const news = [
   },
   {
     id: 3,
-    slug: 'innovation-campus-opens',
-    title: 'Ridgecrest Innovation Campus Opens Its Doors',
+    slug: 'commercial-complex-mira-road',
+    title: 'MaxBuild Commercial Complex Opens in Mira Road',
     excerpt:
-      'Lumina Tech’s new research campus welcomes its first 2,400 employees across three interconnected buildings.',
+      'A new state-of-the-art commercial complex with 50,000 sq ft of premium office space opens its doors in Mira Road.',
     date: '2024-09-05',
     category: 'Projects',
     image:
@@ -220,21 +234,21 @@ export const whyChooseUs = [
   {
     id: 4,
     title: 'Sustainable by Design',
-    description: 'LEED, WELL, and net-zero pathways embedded from concept through commissioning.',
+    description: 'IGBC, green building, and energy-efficient pathways embedded from concept through commissioning.',
     icon: 'Leaf',
   },
 ]
 
 export const companyTimeline = [
-  { year: '1998', title: 'Founded', description: 'MaxBuild Infrastructure established with a vision for precision construction and landmark delivery.' },
-  { year: '2005', title: 'National Expansion', description: 'Opened regional offices and delivered first high-rise commercial tower.' },
-  { year: '2012', title: 'Design-Build Pioneer', description: 'Launched integrated design-build studio for accelerated delivery.' },
-  { year: '2018', title: 'Infrastructure Era', description: 'Entered major civil works with award-winning transit bridges.' },
-  { year: '2024', title: 'Net-Zero Commitment', description: 'Announced 2030 carbon-neutral operations roadmap.' },
+  { year: '1998', title: 'Founded', description: 'MaxBuild Infrastructure established in Mumbai with a vision for precision construction and landmark delivery.' },
+  { year: '2005', title: 'Regional Expansion', description: 'Expanded operations across Bhayander, Mira Road, and Thane. Delivered first high-rise commercial tower.' },
+  { year: '2012', title: 'Design-Build Pioneer', description: 'Launched integrated design-build studio for accelerated delivery across Mumbai Metropolitan Region.' },
+  { year: '2018', title: 'Infrastructure Era', description: 'Entered major infrastructure and civil works across Maharashtra.' },
+  { year: '2024', title: 'Green Building Commitment', description: 'Announced sustainability roadmap with IGBC and green building certifications.' },
 ]
 
 export const values = [
-  { title: 'Integrity', description: 'We say what we mean and deliver what we promise — every time.' },
+  { title: 'Integrity', description: 'We say what we mean and deliver what we promise \u2014 every time.' },
   { title: 'Craft', description: 'Excellence in every joint, finish, and structural connection.' },
   { title: 'Partnership', description: 'We succeed when our clients and communities thrive.' },
   { title: 'Innovation', description: 'We adopt methods and technologies that raise the industry standard.' },
@@ -244,50 +258,50 @@ export const careers = [
   {
     id: 1,
     title: 'Senior Project Manager',
-    location: 'San Francisco, CA',
+    location: 'Bhayander West, Thane',
     type: 'Full-time',
     department: 'Operations',
-    description: 'Lead delivery of complex commercial and mixed-use programs from preconstruction through handover.',
+    description: 'Lead delivery of complex residential and commercial programs from preconstruction through handover across Mumbai MMR.',
   },
   {
     id: 2,
-    title: 'Structural Engineer',
-    location: 'Denver, CO',
+    title: 'Civil / Structural Engineer',
+    location: 'Bhayander, Maharashtra',
     type: 'Full-time',
     department: 'Engineering',
-    description: 'Design and peer-review structural systems for high-rise, seismic, and long-span projects.',
+    description: 'Design and review structural systems for high-rise, residential, and commercial projects across Mumbai and Thane.',
   },
   {
     id: 3,
-    title: 'Superintendents — Multiple Markets',
-    location: 'Multiple Locations',
+    title: 'Site Supervisor \u2014 Multiple Sites',
+    location: 'Mumbai / Mira Road / Thane',
     type: 'Full-time',
     department: 'Field Operations',
-    description: 'Drive field excellence, trade coordination, and safety culture on active job sites.',
+    description: 'Drive field excellence, trade coordination, and safety culture on active construction sites across MMR.',
   },
   {
     id: 4,
-    title: 'Sustainability Analyst',
-    location: 'Austin, TX',
+    title: 'Architect / Design Lead',
+    location: 'Bhayander West, Thane',
     type: 'Full-time',
-    department: 'Sustainability',
-    description: 'Support LEED/WELL documentation and carbon tracking across the project portfolio.',
+    department: 'Design',
+    description: 'Lead architectural design for residential and commercial projects, from concept to MCGM-approved drawings.',
   },
   {
     id: 5,
-    title: 'BIM Coordinator',
-    location: 'Remote / Hybrid',
+    title: 'Quantity Surveyor / Estimator',
+    location: 'Bhayander / Mumbai',
     type: 'Full-time',
-    department: 'Technology',
-    description: 'Manage clash detection, model federation, and digital twin workflows for major projects.',
+    department: 'Estimation',
+    description: 'Prepare BOQs, cost estimates, and tender documents for residential and commercial construction projects.',
   },
 ]
 
 export const benefits = [
-  { title: 'Competitive Compensation', description: 'Market-leading salary bands with performance bonuses.' },
-  { title: 'Health & Wellness', description: 'Comprehensive medical, dental, vision, and mental health support.' },
-  { title: 'Career Growth', description: 'Mentorship programs, tuition support, and clear advancement paths.' },
-  { title: 'Retirement', description: '401(k) with generous company match from day one.' },
-  { title: 'Flexible Work', description: 'Hybrid options for eligible corporate and design roles.' },
-  { title: 'Project Pride', description: 'Work on landmarks that shape skylines and communities.' },
+  { title: 'Competitive Compensation', description: 'Market-leading salary packages with performance bonuses.' },
+  { title: 'Health & Wellness', description: 'Comprehensive health insurance for employees and family (ESIC / Group Mediclaim).' },
+  { title: 'Career Growth', description: 'Mentorship programs, training support, and clear advancement paths.' },
+  { title: 'Provident Fund', description: 'EPF with generous company contribution from day one.' },
+  { title: 'Flexible Work', description: 'Hybrid options for eligible design and corporate roles.' },
+  { title: 'Project Pride', description: 'Work on landmarks that shape Mumbai\'s skyline and communities.' },
 ]

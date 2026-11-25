@@ -12,10 +12,16 @@ export default function Team() {
   return (
     <>
       <SEO
-        title="Our Team"
-        description="Meet the leadership and specialists behind MaxBuild Infrastructure's landmark projects."
+        title="Our Team — Expert Engineers & Builders"
+        description="Meet the leadership and specialists behind MaxBuild Infrastructure's landmark construction projects across Mumbai, Bhayander, Mira Road & Thane. Expert engineers, architects, and project managers."
         path="/team"
         image={IMAGES.culture}
+        keywords={[
+          'construction team Mumbai',
+          'expert builders Bhayander',
+          'experienced engineers Thane',
+          'construction leadership Mumbai',
+        ]}
       />
       <PageHero
         eyebrow="Our Team"
