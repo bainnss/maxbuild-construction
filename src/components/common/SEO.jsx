@@ -47,7 +47,7 @@ export default function SEO({
     legalName: company.legalName,
     alternateName: company.shortName,
     url: company.websiteUrl || SITE_URL,
-    logo: company.logoUrl || `${company.websiteUrl || SITE_URL}/maxbuild-logo.svg`,
+    logo: company.logoUrl || `${company.websiteUrl || SITE_URL}/android-chrome-512x512.png`,
     image: resolvedImage,
     description: resolvedDescription,
     telephone: company.phoneRaw || company.phone,
@@ -67,10 +67,10 @@ export default function SEO({
     },
     geo: geo.latitude
       ? {
-          '@type': 'GeoCoordinates',
-          latitude: geo.latitude,
-          longitude: geo.longitude,
-        }
+        '@type': 'GeoCoordinates',
+        latitude: geo.latitude,
+        longitude: geo.longitude,
+      }
       : undefined,
     areaServed: (geo.serviceAreas || []).map((area) => ({
       '@type': 'City',
@@ -159,94 +159,94 @@ export default function SEO({
   /* ── Article schema (for news / blog) ── */
   const articleSchema = article
     ? {
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: title,
-        description: resolvedDescription,
-        image: resolvedImage,
-        datePublished: article.datePublished,
-        dateModified: article.dateModified || article.datePublished,
-        author: {
-          '@type': 'Organization',
-          name: company.name,
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: company.name,
-          logo: {
-            '@type': 'ImageObject',
-            url:
-              company.logoUrl ||
-              `${company.websiteUrl || SITE_URL}/maxbuild-logo.svg`,
-          },
-        },
-      }
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description: resolvedDescription,
+      image: resolvedImage,
+      datePublished: article.datePublished,
+      dateModified: article.dateModified || article.datePublished,
+      author: {
+        '@type': 'Organization',
+        name: company.name,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: company.name,
+        logo: {
+          '@type': 'ImageObject',
+          url:
+            company.logoUrl ||
+              `${company.websiteUrl || SITE_URL}/android-chrome-512x512.png`,
+      },
+    },
+}
     : null
 
-  /* Combine all schemas */
-  const schemas = [
-    localBusinessSchema,
-    websiteSchema,
-    path !== '/' ? breadcrumbSchema : null,
-    articleSchema,
-    jsonLd,
-  ].filter(Boolean)
+/* Combine all schemas */
+const schemas = [
+  localBusinessSchema,
+  websiteSchema,
+  path !== '/' ? breadcrumbSchema : null,
+  articleSchema,
+  jsonLd,
+].filter(Boolean)
 
-  return (
-    <Helmet>
-      {/* ── Primary Meta ── */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={resolvedDescription} />
-      <meta name="keywords" content={allKeywords} />
-      <link rel="canonical" href={url} />
-      {noindex && <meta name="robots" content="noindex, nofollow" />}
-      {!noindex && (
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      )}
+return (
+  <Helmet>
+    {/* ── Primary Meta ── */}
+    <title>{fullTitle}</title>
+    <meta name="description" content={resolvedDescription} />
+    <meta name="keywords" content={allKeywords} />
+    <link rel="canonical" href={url} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {!noindex && (
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    )}
 
-      {/* ── Geo / Local SEO ── */}
-      <meta name="geo.region" content={`${geo.country || 'IN'}-${geo.region || 'MH'}`} />
-      <meta name="geo.placename" content={company.address?.city || 'Bhayander'} />
-      {geo.latitude && (
-        <meta name="geo.position" content={`${geo.latitude};${geo.longitude}`} />
-      )}
-      {geo.latitude && (
-        <meta name="ICBM" content={`${geo.latitude}, ${geo.longitude}`} />
-      )}
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="author" content={company.name} />
-      <meta name="distribution" content="local" />
-      <meta name="rating" content="general" />
-      <meta name="coverage" content="India" />
-      <meta name="target" content="all" />
-      <meta name="HandheldFriendly" content="True" />
+    {/* ── Geo / Local SEO ── */}
+    <meta name="geo.region" content={`${geo.country || 'IN'}-${geo.region || 'MH'}`} />
+    <meta name="geo.placename" content={company.address?.city || 'Bhayander'} />
+    {geo.latitude && (
+      <meta name="geo.position" content={`${geo.latitude};${geo.longitude}`} />
+    )}
+    {geo.latitude && (
+      <meta name="ICBM" content={`${geo.latitude}, ${geo.longitude}`} />
+    )}
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="author" content={company.name} />
+    <meta name="distribution" content="local" />
+    <meta name="rating" content="general" />
+    <meta name="coverage" content="India" />
+    <meta name="target" content="all" />
+    <meta name="HandheldFriendly" content="True" />
 
-      {/* ── Open Graph ── */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={resolvedDescription} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={resolvedImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${company.name} — ${company.tagline}`} />
-      <meta property="og:site_name" content={company.name} />
-      <meta property="og:locale" content="en_IN" />
+    {/* ── Open Graph ── */}
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={resolvedDescription} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={resolvedImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${company.name} — ${company.tagline}`} />
+    <meta property="og:site_name" content={company.name} />
+    <meta property="og:locale" content="en_IN" />
 
-      {/* ── Twitter Cards ── */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={resolvedDescription} />
-      <meta name="twitter:image" content={resolvedImage} />
-      <meta name="twitter:image:alt" content={`${company.name} — ${company.tagline}`} />
+    {/* ── Twitter Cards ── */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={resolvedDescription} />
+    <meta name="twitter:image" content={resolvedImage} />
+    <meta name="twitter:image:alt" content={`${company.name} — ${company.tagline}`} />
 
-      {/* ── JSON-LD Structured Data ── */}
-      {schemas.map((schema, i) => (
-        <script key={i} type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      ))}
-    </Helmet>
-  )
+    {/* ── JSON-LD Structured Data ── */}
+    {schemas.map((schema, i) => (
+      <script key={i} type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    ))}
+  </Helmet>
+)
 }
