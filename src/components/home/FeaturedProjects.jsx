@@ -25,9 +25,9 @@ export default function FeaturedProjects() {
             View All <ArrowRight size={16} />
           </Link>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-7 md:grid-cols-2 lg:gap-8">
           {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+            <ProjectCard key={project.id} project={project} index={i} variant="featured" />
           ))}
         </div>
       </Container>

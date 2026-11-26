@@ -66,9 +66,9 @@ export default function Projects() {
               ))}
             </div>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((project, i) => (
-              <ProjectCard key={project.id} project={project} index={i} />
+              <ProjectCard key={project.id} project={project} index={i} variant="portfolio" />
             ))}
           </div>
         </Container>
