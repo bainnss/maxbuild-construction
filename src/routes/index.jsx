@@ -23,6 +23,7 @@ const ProjectDetailsAdmin = lazy(() => import('../admin/pages/Projects/ProjectDe
 const AdminServices = lazy(() => import('../admin/pages/Services'))
 const AdminTeam = lazy(() => import('../admin/pages/Team'))
 const AdminClients = lazy(() => import('../admin/pages/Clients'))
+const AdminCareers = lazy(() => import('../admin/pages/Careers'))
 const AdminSettings = lazy(() => import('../admin/pages/Settings'))
 
 function RouteFallback() {
@@ -65,6 +66,7 @@ export default function AppRoutes() {
               <Route path="services" element={<AdminServices />} />
               <Route path="team" element={<AdminTeam />} />
               <Route path="clients" element={<AdminClients />} />
+              <Route path="careers" element={<AdminCareers />} />
               <Route path="settings" element={<AdminSettings />} />
             </Route>
           </Route>

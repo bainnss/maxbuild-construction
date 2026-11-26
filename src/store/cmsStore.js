@@ -7,6 +7,7 @@ const emptyState = {
   services: [],
   team: [],
   clients: [],
+  careers: [],
   settings: mergeSettings({}),
   activities: [],
 }
@@ -27,6 +28,7 @@ export const useCmsStore = create((set, get) => ({
         services: data.services || [],
         team: data.team || [],
         clients: data.clients || [],
+        careers: data.careers || [],
         settings: mergeSettings(data.settings),
         hydrated: true,
         loading: false,
@@ -45,6 +47,7 @@ export const useCmsStore = create((set, get) => ({
         services: data.services || [],
         team: data.team || [],
         clients: data.clients || [],
+        careers: data.careers || [],
         settings: mergeSettings(data.settings),
         activities: data.activities || [],
         hydrated: true,
@@ -150,6 +153,25 @@ export const useCmsStore = create((set, get) => ({
     set((s) => ({ clients: (s.clients || []).filter((item) => item.id !== id) }))
   },
 
+  addCareer: async (payload) => {
+    const career = await api('/careers', { method: 'POST', body: payload })
+    set((s) => ({ careers: [career, ...(s.careers || [])] }))
+    return career
+  },
+
+  updateCareer: async (id, payload) => {
+    const career = await api(`/careers/${id}`, { method: 'PUT', body: payload })
+    set((s) => ({
+      careers: (s.careers || []).map((item) => (item.id === id ? career : item)),
+    }))
+    return career
+  },
+
+  deleteCareer: async (id) => {
+    await api(`/careers/${id}`, { method: 'DELETE' })
+    set((s) => ({ careers: (s.careers || []).filter((item) => item.id !== id) }))
+  },
+
   updateSettings: async (payload) => {
     const settings = await api('/settings', { method: 'PUT', body: payload })
     set({ settings: mergeSettings(settings) })
@@ -163,8 +185,8 @@ export const useCmsStore = create((set, get) => ({
 
   globalSearch: (query) => {
     const q = query.trim().toLowerCase()
-    if (!q) return { projects: [], services: [], team: [], clients: [] }
-    const { projects, services, team, clients } = get()
+    if (!q) return { projects: [], services: [], team: [], clients: [], careers: [] }
+    const { projects, services, team, clients, careers } = get()
     return {
       projects: projects.filter(
         (p) =>
@@ -183,6 +205,12 @@ export const useCmsStore = create((set, get) => ({
           m.designation?.toLowerCase().includes(q)
       ),
       clients: (clients || []).filter((c) => c.name?.toLowerCase().includes(q)),
+      careers: (careers || []).filter(
+        (j) =>
+          j.title?.toLowerCase().includes(q) ||
+          j.department?.toLowerCase().includes(q) ||
+          j.location?.toLowerCase().includes(q)
+      ),
     }
   },
 }))

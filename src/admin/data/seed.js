@@ -1,6 +1,7 @@
 import { projects as seedProjects } from '../../data/projects.js'
 import { services as seedServices } from '../../data/services.js'
 import { team as seedTeam } from '../../data/team.js'
+import { careers as seedCareers } from '../../data/content.js'
 import { generateId, nowIso, parseLocation } from '../utils/index.js'
 import { defaultSettings, mergeSettings } from './settingsDefaults.js'
 
@@ -117,11 +118,44 @@ const seedClients = [
   'Atlas Energy',
 ]
 
+export const normalizeCareer = (c, index = 0) => ({
+  id: String(c.id ?? generateId()),
+  title: c.title || 'Untitled Position',
+  slug:
+    c.slug ||
+    (c.title || `role-${index + 1}`)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, ''),
+  department: c.department || 'Operations',
+  location: c.location || 'Mumbai / Bhayander',
+  employmentType: c.employmentType || c.type || 'Full-time',
+  experience: c.experience || '2–5 Years',
+  salaryRange: c.salaryRange || 'Competitive',
+  openings: c.openings ?? 1,
+  description: c.description || '',
+  requirements: c.requirements || [
+    'Relevant degree or diploma in Civil / Architecture / Engineering',
+    'Strong site coordination and quality assurance skills',
+    'Familiarity with local building codes and safety standards',
+  ],
+  responsibilities: c.responsibilities || [
+    'Execute project deliverables on schedule and within budget',
+    'Coordinate with consultants, contractors, and site teams',
+  ],
+  featured: Boolean(c.featured),
+  displayOrder: c.displayOrder ?? index + 1,
+  status: c.status || 'Active',
+  createdAt: c.createdAt || nowIso(),
+  updatedAt: c.updatedAt || nowIso(),
+})
+
 export const getSeedData = () => ({
   projects: seedProjects.map(normalizeProject),
   services: seedServices.map(normalizeService),
   team: seedTeam.map(normalizeTeamMember),
   clients: seedClients.map(normalizeClient),
+  careers: seedCareers.map(normalizeCareer),
   settings: defaultSettings(),
   activities: [
     {

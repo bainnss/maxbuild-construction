@@ -3,6 +3,7 @@ import { Project } from '../models/Project.js'
 import { Service } from '../models/Service.js'
 import { TeamMember } from '../models/TeamMember.js'
 import { Client } from '../models/Client.js'
+import { Career } from '../models/Career.js'
 import { Settings } from '../models/Settings.js'
 import { Activity } from '../models/Activity.js'
 import { requireAuth } from '../middleware/auth.js'
@@ -12,11 +13,12 @@ import { seedDatabase } from '../seed.js'
 const router = Router()
 
 router.get('/content', requireAuth, async (_req, res) => {
-  const [projects, services, team, clients, settingsDoc, activities] = await Promise.all([
+  const [projects, services, team, clients, careers, settingsDoc, activities] = await Promise.all([
     Project.find().sort({ updatedAt: -1 }),
     Service.find().sort({ displayOrder: 1 }),
     TeamMember.find().sort({ displayOrder: 1 }),
     Client.find().sort({ displayOrder: 1 }),
+    Career.find().sort({ displayOrder: 1, createdAt: -1 }),
     Settings.findOne({ key: 'site' }),
     Activity.find().sort({ createdAt: -1 }).limit(40),
   ])
@@ -26,6 +28,7 @@ router.get('/content', requireAuth, async (_req, res) => {
     services: services.map((item) => item.toJSON()),
     team: team.map((item) => item.toJSON()),
     clients: clients.map((item) => item.toJSON()),
+    careers: careers.map((item) => item.toJSON()),
     settings: mergeSettings(settingsDoc?.data || {}),
     activities: activities.map((item) => ({
       ...item.toJSON(),

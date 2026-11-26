@@ -5,6 +5,7 @@ import { Project } from './models/Project.js'
 import { Service } from './models/Service.js'
 import { TeamMember } from './models/TeamMember.js'
 import { Client } from './models/Client.js'
+import { Career } from './models/Career.js'
 import { Settings } from './models/Settings.js'
 import { Activity } from './models/Activity.js'
 import { getSeedData } from '../src/admin/data/seed.js'
@@ -38,6 +39,7 @@ export async function seedDatabase({ force = false } = {}) {
       Service.deleteMany({}),
       TeamMember.deleteMany({}),
       Client.deleteMany({}),
+      Career.deleteMany({}),
       Settings.deleteMany({}),
       Activity.deleteMany({}),
     ])
@@ -48,6 +50,7 @@ export async function seedDatabase({ force = false } = {}) {
   await Service.insertMany(seed.services.map(stripMeta))
   await TeamMember.insertMany(seed.team.map(stripMeta))
   await Client.insertMany(seed.clients.map(stripMeta))
+  await Career.insertMany((seed.careers || []).map(stripMeta))
   await Settings.create({ key: 'site', data: mergeSettings(seed.settings) })
   await Activity.create({
     type: 'system',

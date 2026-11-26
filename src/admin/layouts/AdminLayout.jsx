@@ -7,6 +7,7 @@ import {
   Briefcase,
   Users,
   Building2,
+  UserPlus,
   Settings,
   LogOut,
   Menu,
@@ -27,6 +28,7 @@ const NAV = [
   { to: '/admin/services', label: 'Services', icon: Briefcase },
   { to: '/admin/team', label: 'Team', icon: Users },
   { to: '/admin/clients', label: 'Clients', icon: Building2 },
+  { to: '/admin/careers', label: 'Careers', icon: UserPlus },
   { to: '/admin/settings', label: 'Settings', icon: Settings },
 ]
 
@@ -178,7 +180,8 @@ export default function AdminLayout() {
                   {!results.projects.length &&
                     !results.services.length &&
                     !results.team.length &&
-                    !results.clients?.length && (
+                    !results.clients?.length &&
+                    !results.careers?.length && (
                     <p className="px-3 py-4 text-sm text-slate-500">No results</p>
                   )}
                   {results.projects.slice(0, 4).map((p) => (
@@ -235,6 +238,20 @@ export default function AdminLayout() {
                     >
                       <span className="text-xs text-accent">Client</span>
                       <p className="text-white">{c.name}</p>
+                    </button>
+                  ))}
+                  {(results.careers || []).slice(0, 3).map((j) => (
+                    <button
+                      key={j.id}
+                      type="button"
+                      className="block w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-white/5"
+                      onClick={() => {
+                        setQuery('')
+                        navigate('/admin/careers')
+                      }}
+                    >
+                      <span className="text-xs text-accent">Career</span>
+                      <p className="text-white">{j.title}</p>
                     </button>
                   ))}
                 </div>

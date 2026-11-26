@@ -80,6 +80,18 @@ export function usePublicClients() {
   )
 }
 
+export function usePublicCareers() {
+  const careers = useCmsStore((s) => s.careers)
+  return useMemo(
+    () =>
+      (careers || [])
+        .filter((c) => c.status === 'Active')
+        .slice()
+        .sort(byDisplayOrder),
+    [careers]
+  )
+}
+
 export function useSiteSettings() {
   const raw = useCmsStore((s) => s.settings)
 

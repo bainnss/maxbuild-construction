@@ -42,3 +42,15 @@ export async function uploadImage(file) {
   }
   return data.secure_url
 }
+
+export async function submitCareerApplication(formData) {
+  const res = await fetch('/api/careers/apply', {
+    method: 'POST',
+    body: formData,
+  })
+  const data = await res.json().catch(() => ({}))
+  if (!res.ok) {
+    throw new ApiError(data.message || 'Application submission failed', res.status)
+  }
+  return data
+}

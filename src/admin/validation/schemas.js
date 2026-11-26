@@ -89,6 +89,22 @@ export const clientSchema = z.object({
   published: z.boolean().optional(),
 })
 
+export const careerSchema = z.object({
+  title: z.string().min(2, 'Job title is required'),
+  department: z.string().min(2, 'Department is required'),
+  location: z.string().min(2, 'Location is required'),
+  employmentType: z.enum(['Full-time', 'Part-time', 'Contract', 'Internship']),
+  experience: z.string().optional(),
+  salaryRange: z.string().optional(),
+  openings: z.coerce.number().min(1, 'At least 1 opening').optional(),
+  description: z.string().min(20, 'Job description must be at least 20 characters'),
+  requirements: z.array(z.string()).optional(),
+  responsibilities: z.array(z.string()).optional(),
+  featured: z.boolean().optional(),
+  displayOrder: z.coerce.number().optional(),
+  status: z.enum(['Active', 'Closed', 'Draft']),
+})
+
 export const settingsSchema = z.object({
   companyName: z.string().min(2, 'Company name is required'),
   shortName: z.string().optional(),

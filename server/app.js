@@ -12,6 +12,7 @@ import settingsRoutes from './routes/settings.js'
 import uploadRoutes from './routes/upload.js'
 import publicRoutes from './routes/public.js'
 import adminRoutes from './routes/admin.js'
+import careerRoutes from './routes/careers.js'
 
 const app = express()
 
@@ -61,6 +62,7 @@ app.use('/api/team', teamRoutes)
 app.use('/api/clients', clientRoutes)
 app.use('/api/settings', settingsRoutes)
 app.use('/api/upload', uploadRoutes)
+app.use('/api/careers', careerRoutes)
 app.use('/api/admin', adminRoutes)
 
 app.use((err, _req, res, _next) => {
